@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0">
+     <title>Personal portfolio</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="header">
+      <div class="container">
+         <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+               
+               <li><a href="#header">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#services">Services</a></li>
+               <li><a href="#portfolio">Portfolio</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+         <div class="header-text">
+            <p style="color: white;">Front End Developer</p>
+            <h2 style="color: white;">Hi, I'm <span>Bheesham</span><br>from Pakistan</h2>
+         </div>
+      </div>
+   </div>
+
+   <!-- About Section -->
+   <div id="about">
+      <div class="container">
+         <div class="row">
+            <div class="about-col-1">
+               <img src="images/secBB.jpg">
+            </div>
+            <div class="about-col-2">
+               <h1 class="sub-title" style="color: white;">About Me</h1>
+               <p style="color: white;">My name is Bheesham Solanki, I am a graduate of Sukkur IBA University.<br>I have acquired my skills in the field of web development, especially front-end development. I know HTML, CSS, and JavaScript.<br>I have done many projects for small and large businesses.</p>
+               <div class="tab-titles">
+                  <p class="tab-links active-link" style="color: white;" onclick="opentab('skills')">Skills</p>
+                  <p class="tab-links" style="color: white;" onclick="opentab('Experience')">Experience</p>
+                  <p class="tab-links" style="color: white;" onclick="opentab('Education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                  <ul>
+                     <li style="color: white;"><span>Front end development</span><br>HTML, CSS, JavaScript</li>
+                     <li style="color: white;"><span>Command on Programming languages</span><br>C++, Java, Data Structures</li>
+                  </ul>
+               </div>
+               <div class="tab-contents" id="Experience">
+                  <ul>
+                     <li style="color: white;"><span>2022-current</span><br>Junior web developer, remote job</li>
+                     <li style="color: white;"><span>2021</span><br>JavaScript developer</li>
+                     <li style="color: white;"><span>2020</span><br>Freelancing at Fiverr</li>
+                  </ul>
+               </div>
+               <div class="tab-contents" id="Education">
+                  <ul>
+                     <li style="color: white;"><span>2019</span><br>Bachelors from Sukkur IBA University</li>
+                     <li style="color: white;"><span>2018</span><br>Intermediate from IBA Public School Sukkur</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Services Section -->
+   <div id="services">
+      <div class="container">
+         <h1 class="sub-title" style="color: white;">My Services</h1>
+         <div class="services-list">
+            <div>
+               <h2 style="color: white;">Web development</h2>
+               <p style="color: white;">We make web pages using HTML, CSS, and JavaScript. Our service includes user interactive<br>web pages and amazing design of web pages. Hover effects and many other things.</p>
+               <a href="#">Learn more</a>
+            </div>
+            <div>
+               <h2 style="color: white;">Programming Languages</h2>
+               <p style="color: white;">We are experts in programming languages like C++, Java, and Data Structures.<br>MySQL and Assembly language.</p>
+               <a href="#">Learn more</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Portfolio Section -->
+   <div id="portfolio">
+      <div class="container">
+         <h1 style="color: white;">My Work</h1>
+         <div class="work-list">
+            <img src="images/work11.png">
+            <img src="images/work22.png">
+            <img src="images/work33.png">
+         </div>
+      </div>
+   </div>
+
+   <!-- Contact Section -->
+   <div id="contact">
+      <!-- Your contact section content goes here -->
+   </div>
+
+   <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+         for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+         }
+         for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+      }
+   </script>
+</body>
+</html>
